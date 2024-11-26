@@ -1,18 +1,18 @@
 #include <stdio.h>
-#include <string.h>
-
-int main() {
-    char password[] = "666888";
-    char input[20];
-   
-    printf("Ban hay nhap mat khau: ");
-    scanf("%s", input);
-
-    if (strcmp(password, input) == 0) {
-        printf("Da dang nhap thanh cong!\n");
-    } else {
-        printf("Ban nhap sai roi.Hay thu lai.\n");
+int main(){
+int n;
+    printf("Ban hay nhap vao mot so nguyen: ");
+    scanf("%d", &n);
+    if (n <= 0) {
+    printf("Ban hay nhap vao so nguyen duong.\n");
+    return 1;
     }
+    printf("Cac uoc cua so %d la: \n", n);
+    for (int i = 1; i <= n; i++) {
+    if (n % i == 0) {
+    printf("%d ", i);
+        }
+    }
+    printf("\n");
     return 0;
 }
-
